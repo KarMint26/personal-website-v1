@@ -1,6 +1,7 @@
 // Humburger Button
 const humburger = document.getElementById('humburger-button');
 const navbarList = document.querySelector('.navbar-list');
+const navbarListComponent = document.querySelectorAll('.nb-list');
 const navbarBox = document.querySelectorAll('.navbar-box');
 let count = 0;
 
@@ -21,4 +22,12 @@ navbarBox.forEach(nb => {
         humburger.innerText = '☰';
         count = 0;
     });
+});
+
+navbarListComponent.forEach(navb => {
+    navb.addEventListener('click', () => {
+        navbarList.classList.remove('active');
+        humburger.innerText = '☰';
+        count = 0;
+    })
 });
