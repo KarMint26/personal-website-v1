@@ -1,0 +1,682 @@
+/* Css Variable */
+:root {
+	--main-color: rgb(0, 255, 191);
+    --primary-color: rgb(255, 0, 85);
+    --secondary-color: rgb(184, 0, 61);
+    --font-color: #fff;
+    --font-color-second: #050505;
+}
+
+/* Fonts Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Start Styling CSS */
+
+html {
+	scroll-behavior: smooth !important;
+	font-family: 'Poppins', sans-serif;
+}
+
+body {
+	background-color: #f0f0f0;
+}
+
+/* Mobile Interface */
+
+#home .container {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: url(../assets/bg/Home-BG.jpg);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: right;
+	width: 100%;
+	color: rgb(255, 153, 0);
+	font-size: 1.7rem;
+	text-align: center;
+	font-weight: 600;
+	line-height: 40px;
+	filter: contrast(1.1);
+	text-shadow: 1.5px 1.5px 1.5px rgba(0, 0, 0, .7);
+	height: 100vh;
+	z-index: 2;
+}
+
+#home .navbar {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+	padding: .5rem;
+	background-color: var(--primary-color);
+}
+
+#home .navbar .navbar-title img {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	margin-left: .8rem;
+}
+
+#home .navbar-list {
+	position: absolute;
+	left: 0;
+	padding: .5rem 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: var(--primary-color);
+	width: 100%;
+	gap: .4rem;
+	z-index: 1;
+	transform: translateY(-50px);
+	opacity: 0;
+	transition: .4s ease-in-out;
+}
+
+#home .navbar-list.active {
+	transform: translateY(98px);
+	opacity: 1;
+}
+
+#home .navbar-list li {
+	width: 95%;
+	height: 20px;
+	text-align: center;
+	padding: .8rem .5rem .5rem .5rem;
+}
+
+#home .navbar-list li:hover {
+	background-color: var(--secondary-color);
+}
+
+#home .navbar-list li:hover a {
+	font-weight: #d1d1d1;
+}
+
+#home .navbar-list li a {
+	color: var(--font-color);
+	text-decoration: none;
+	cursor: pointer;
+}
+
+#home .navbar .humburger-menu{
+	position: relative;
+	z-index: 1;
+	margin-right: .8rem;
+	font-size: 1.3rem;
+	cursor: pointer;
+	color: var(--font-color);
+	font-weight: 500;
+	text-shadow: .5px .5px .5px rgba(87, 86, 86, 0.5);
+}
+
+/* Section About Me */
+
+#about-me {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	z-index: -2;
+	gap: 1rem;
+	text-align: center;
+	padding: 2.5rem 2rem 1rem 2rem;
+	font-size: 1rem;
+}
+
+#about-me .bot-content .box {
+	margin-top: 1rem;
+}
+
+#about-me .bot-content .box:last-child {
+	margin-top: 2rem;
+}
+
+#about-me .top-content p,
+#about-me .bot-content p {
+	text-align: justify;
+	margin-top: 1rem;
+}
+
+#about-me img {
+	width: 100px;
+}
+
+/* My Projects Section */
+
+#my-projects {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+#my-projects hr {
+	border: 1px solid rgb(187, 185, 185);
+	width: 50%;
+	margin: 3.5rem 0;
+}
+
+#my-projects h1 {
+	font-size: 1.5rem;
+	margin: 1rem 0 1.5rem;
+}
+
+#my-projects .image-box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 20px;
+}
+
+#my-projects .image-box img {
+	width: 280px;
+	border-radius: 5px;
+	box-shadow: .5px .5px 1px .5px rgba(43, 43, 43, .5);
+	margin: .5rem 0;
+}
+
+/* Contact Me Section */
+
+#contact-me {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 1.8rem;
+	margin-bottom: 2rem;
+}
+
+#contact-me img {
+	margin-top: 1rem;
+	width: 15%;
+}
+
+#contact-me .title-contact {
+	margin: 0 0 3rem 0;
+	font-size: 1.5rem;
+}
+
+#contact-me .content-contact {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+#contact-me .content-contact .left-pos {
+	margin-bottom: 2rem;
+}
+
+#contact-me .content-contact .left-pos form {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+	gap: .5rem;
+	width: 250px;
+}
+
+#contact-me .content-contact .left-pos form input {
+	outline: none;
+	border: 1px solid #adadad;
+	border-radius: 5px;
+	padding: .7rem;
+	width: 100%;
+	margin-bottom: .8rem;
+}
+
+#contact-me .content-contact .left-pos form textarea {
+	outline: none;
+	border: 1px solid #adadad;
+	border-radius: 5px;
+	width: 107%;
+	margin-bottom: .7rem;
+}
+
+#contact-me .content-contact .left-pos form button {
+	padding: .5rem;
+	outline: none;
+	border: 1px solid var(--primary-color);
+	color: var(--primary-color);
+	border-radius: 5px;
+	width: 109%;
+	cursor: pointer;
+	font-weight: 600;
+	transition: .3s ease-in-out;
+}
+
+#contact-me .content-contact .left-pos form button:hover {
+	color: var(--font-color);
+	background-color: var(--primary-color);
+}
+
+#contact-me .content-contact .right-pos {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+#contact-me .content-contact .right-pos h1 {
+	font-size: 1.5rem;
+}
+
+#contact-me .content-contact .right-pos .field-contact {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	text-align: center;
+}
+
+#contact-me .content-contact .right-pos .top-contact {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+}
+
+#contact-me .content-contact .right-pos .top-contact img {
+	width: 30%;
+}
+
+#contact-me .content-contact .right-pos .field-contact p {
+	display: none;
+}
+
+/* Footer Section */
+
+footer {
+	font-size: .8rem;
+	text-align: center;
+	background-color: var(--primary-color);
+	padding: 1rem;
+	color: var(--font-color);
+}
+
+/* Tablet Interface */
+@media (min-width: 768px) {
+	#home .container {
+		font-size: 1.9rem;
+	}
+
+	#home .navbar .navbar-title img {
+		width: 45px;
+		height: 45px;
+	}
+
+	#home .navbar-list {
+		position: relative;
+		left: -20px;
+		padding: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: row;
+		background-color: var(--primary-color);
+		width: fit-content;
+		gap: 20px;
+		z-index: 2;
+		transform: translateY(0);
+		opacity: 1;
+		transition: none;
+	}
+
+	#home .navbar-list li {
+		width: fit-content;
+		height: fit-content;
+		text-align: right;
+		padding: 0;
+	}
+
+	#home .navbar-list li:hover {
+		background-color: var(--primary-color);
+	}
+
+	#home .navbar-list li:hover a {
+		color: #d3d3d3;
+	}
+
+	#home .navbar-list li a {
+		color: var(--font-color);
+		text-decoration: none;
+		font-size: 1rem;
+		transition: .3s ease;
+	}
+
+	#home .navbar-list li a:hover {
+		color: #e6e6e6;
+	}
+
+	#home .navbar .humburger-menu{
+		display: none;
+	}
+
+	/* Section About Me */
+
+	#about-me {
+		padding: 2rem 3rem;
+		font-size: 1.1rem;
+	}
+	
+	#about-me .top-content {
+		width: 60%;
+	}
+
+	#about-me .bot-content {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: row;
+		gap: 100px;
+	}
+	
+	#about-me .bot-content .box:last-child {
+		margin-top: 1rem;
+	}
+	
+	#about-me .top-content p,
+	#about-me .bot-content p {
+		margin-top: 1.2rem;
+		letter-spacing: .2px;
+	}
+	
+	#about-me img {
+		width: 120px;
+	}
+
+	/* My Projects Section */
+
+	#my-projects h1 {
+		font-size: 3rem;
+		margin: 2rem 0;
+	}
+
+	#my-projects .image-box img {
+		width: 90%;
+	}
+
+	/* Contact Me Section */
+
+	#contact-me {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		padding: 1.8rem;
+		margin-bottom: 2rem;
+	}
+	
+	#contact-me img {
+		margin-top: 1rem;
+		width: 15%;
+		margin-left: -5rem;
+	}
+	
+	#contact-me .title-contact {
+		margin: 0 0 3rem 0;
+		font-size: 2.5rem;
+	}
+	
+	#contact-me .content-contact {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: row;
+	}
+	
+	#contact-me .content-contact .left-pos {
+		margin-bottom: 2rem;
+	}
+	
+	#contact-me .content-contact .left-pos form {
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		flex-direction: column;
+		gap: .5rem;
+		width: 300px;
+		margin-left: 1.5rem;
+	}
+	
+	#contact-me .content-contact .left-pos form input {
+		outline: none;
+		border: 1px solid #adadad;
+		border-radius: 5px;
+		padding: .7rem;
+		width: 100%;
+		margin-bottom: .8rem;
+	}
+	
+	#contact-me .content-contact .left-pos form textarea {
+		outline: none;
+		border: 1px solid #adadad;
+		border-radius: 5px;
+		width: 107%;
+		margin-bottom: .7rem;
+	}
+	
+	#contact-me .content-contact .left-pos form button {
+		padding: .5rem;
+		outline: none;
+		border: 1px solid var(--primary-color);
+		color: var(--primary-color);
+		border-radius: 5px;
+		width: 109%;
+		cursor: pointer;
+		font-weight: 600;
+		transition: .3s ease-in-out;
+	}
+	
+	#contact-me .content-contact .left-pos form button:hover {
+		color: var(--font-color);
+		background-color: var(--primary-color);
+	}
+	
+	#contact-me .content-contact .right-pos {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+	
+	#contact-me .content-contact .right-pos h1 {
+		font-size: 1.5rem;
+		display: none;
+	}
+
+	#contact-me .content-contact .right-pos p {
+		font-size: 1.1rem;
+	}
+	
+	#contact-me .content-contact .right-pos a {
+		width: 50%;
+		margin-right: -5rem;
+	}
+
+	#top {
+		margin-left: -.5rem;
+	}
+
+	#mid {
+		margin-left: 3rem;
+		width: 20px;
+	}
+
+	#contact-me .content-contact .right-pos .field-contact {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: row;
+		text-align: center;
+	}
+	
+	#contact-me .content-contact .right-pos .top-contact {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+	
+	#contact-me .content-contact .right-pos .top-contact img {
+		width: 15%;
+	}
+	
+	#contact-me .content-contact .right-pos .field-contact p {
+		display: block;
+		margin-top: .8rem;
+	}
+
+	/* Footer Section */
+
+	footer {
+		font-size: 1rem;
+		padding: 1.5rem;
+	}
+}
+
+/* Desktop Interface */
+@media (min-width: 1024px) {
+	#home .container {
+		font-size: 2rem;
+	}
+
+	#home .navbar .navbar-title img {
+		width: 50px;
+		height: 50px;
+		margin-left: 30px;
+	}
+
+	#home .navbar-list {
+		left: -30px;
+		gap: 25px;
+	}
+
+	#home .navbar-list li a {
+		font-size: 1.2rem;
+	}
+
+	/* Section About Me */
+
+	#about-me {
+		padding: 3rem 4rem;
+		font-size: 1.3rem;
+	}
+	
+	#about-me .top-content {
+		width: 50%;
+	}
+	
+	#about-me img {
+		width: 150px;
+	}
+
+	#about-me .bot-content p {
+		width: 90%;
+	}
+
+	/* Section My Projects */
+
+	#my-projects h1 {
+		font-size: 4rem;
+		margin-bottom: 3rem;
+	}
+
+	/* Section Contact Me */
+
+	#contact-me .title-contact {
+		font-size: 3rem;
+	}
+
+	#contact-me .content-contact .left-pos form {
+		width: 400px;
+	}
+
+	#contact-me .content-contact .left-pos form textarea {
+		width: 104%;
+	}
+	
+	#contact-me .content-contact .left-pos form button {
+		padding: .8rem .5rem;
+		width: 105%;	
+		font-size: 1rem;
+	}
+
+	#contact-me .content-contact .right-pos p {
+		font-size: 1.5rem;
+	}
+
+	#top {
+		margin-left: 1rem;
+	}
+
+	#mid {
+		margin-left: 4rem;
+	}
+
+	#bot {
+		margin-left: 2.3rem;
+	}
+
+	#email-pengguna {
+		margin-left: -2.5rem;
+	}
+
+	footer {
+		font-size: 1.1rem;
+	}
+
+}

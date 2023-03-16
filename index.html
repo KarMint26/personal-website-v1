@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website V1</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="assets/icon/xing.png" type="image/x-icon">
+</head>
+<body>
+    
+    <!-- Section Home -->
+    <section id="home">
+        <div class="container">
+            <h1>Hello Welcome to My Personal Website</h1>
+        </div>
+        <div class="navbar">
+            <div class="navbar-title">
+                <a href="https://codingstudio.id" target="_blank"><img src="assets/icon/logo-coding-studio.png" alt="logo-coding-studio"></a>
+            </div>
+            <ul class="navbar-list">
+                <li><a class="navbar-box" href="#about-me">About Me</a></li>
+                <li><a class="navbar-box" href="#my-projects">My Project</a></li>
+                <li><a class="navbar-box" href="#contact-me">Contact Me</a></li>
+            </ul>
+            <div class="humburger-menu">
+                <span id="humburger-button">☰</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section About Me -->
+    <section id="about-me">
+        <div class="top-content">
+            <div class="box">
+                <img src="assets/main-icon/graduate.png" alt="image-1">
+                <p>Introducing me, Karel Trisnanto Utomo, a web developer who focuses on making websites look modern and responsive
+                </p>
+            </div>
+        </div>
+        <div class="bot-content">
+            <div class="box">
+                <img src="assets/main-icon/degree.png" alt="image-2">
+                <p>I have taken several special classes for creating responsive web interfaces and have had several certificates of completion
+                </p>
+            </div>
+            <div class="box">
+                <img src="assets/main-icon/student.png" alt="image-3">
+                <p>I have mastered how to create a website display using <strong>HTML, CSS and JavaScript</strong> i can also use modern Framework like <strong>Bootstrap and Tailwind</strong>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section My projects -->
+    <section id="my-projects">
+        <hr>
+        <h1>My Projects</h1>
+        <div class="image-box">
+            <img src="assets/project/Dice-Game-With-DOMJS.png" alt="project-1">
+            <img src="assets/project/First-Personal-Site.png" alt="project-2">
+            <img src="assets/project/Project-Web-RevoU.png" alt="project-3">
+            <img src="assets/project/Project-TinDog-Udemy.png" alt="project-4">
+        </div>
+        <hr id="line-bottom">
+    </section>
+
+    <!-- Section Contact Me -->
+    <section id="contact-me">
+        <div class="title-contact">
+            <h1>Contact Me</h1>
+        </div>
+        <div class="content-contact">
+            <div class="left-pos">
+                <form action="#home">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="your name" autocomplete="off" required>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="example@gmail.com" autocomplete="off" required>
+                    <label for="text-area">Pesan</label>
+                    <textarea id="text-area" cols="30" rows="8" style="resize: none;"></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <div class="right-pos">
+                <h1>Tap one to get info</h1>
+                <div class="top-contact">
+                    <div class="field-contact">
+                        <a id="top" href="https://wa.me/62895422993335" target="_blank"><img src="assets/main-icon/telephone.png" alt="telephone"></a>
+                        <p>+62 895-4229-93335</p>
+                    </div>
+                    <div class="field-contact">
+                        <a id="mid" href="mailto:kareltrisnanto26@gmail.com"><img src="assets/main-icon/email.png" alt="email"></a>
+                        <p id="email-pengguna">kareltrisnanto26@gmail.com</p>
+                    </div>
+                </div>
+                <div class="field-contact">
+                    <a id="bot" href="https://www.linkedin.com/in/karel-trisnanto-utomo-8564ba259/" target="_blank"><img src="assets/main-icon/linkedin.png" alt="linkedin"></a>
+                    <p>Karel Trisnanto Utomo</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; Kelas Website Responsive, Inc. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
