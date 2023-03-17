@@ -446,8 +446,15 @@ footer {
 		margin: 2rem 0;
 	}
 
+	#my-projects .image-box {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		width: 50%;
+		column-gap: 40px;
+	}
+
 	#my-projects .image-box img {
-		width: 90%;
+		width: 250px;
 	}
 
 	/* Contact Me Section */
@@ -634,6 +641,17 @@ footer {
 	#my-projects h1 {
 		font-size: 4rem;
 		margin-bottom: 3rem;
+	}
+
+	#my-projects .image-box {
+		display: flex;
+		flex-direction: row;
+		width: 80%;
+		gap: 15px;
+	}
+
+	#my-projects .image-box img {
+		width: 25%;
 	}
 
 	/* Section Contact Me */
